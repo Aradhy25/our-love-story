@@ -1,0 +1,1 @@
+Premium romantic static website. Open index.html in a modern browser. The uploaded memories are in assets/. The letter uses the previously improvised assistant-written version, not the user's original raw message.

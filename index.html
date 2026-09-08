@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#09070a">
+<title>For My Babyyy — A Letter From My Heart</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap');
+:root {
+ --bg:#09070a; --paper:#f4eee8; --ink:#241b20; --rose:#f19ab7; --rose2:#ffd9e5;
+ --muted:#a89aa1; --line:rgba(255,255,255,.11); --glass:rgba(255,255,255,.055);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:#fff7fa;font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:var(--rose);color:#180d12}
+#progress{position:fixed;top:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--rose),#fff);z-index:200}
+.cursor{position:fixed;width:280px;height:280px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(241,154,183,.12),transparent 65%);transform:translate(-50%,-50%);mix-blend-mode:screen}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;justify-content:space-between;align-items:center;padding:24px clamp(20px,5vw,70px);mix-blend-mode:screen}
+.brand{font-family:"Cormorant Garamond";font-size:20px;letter-spacing:.06em}
+.topbar a{color:#fff;text-decoration:none;font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.8}
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;padding:110px 24px 70px;overflow:hidden;background:
+radial-gradient(ellipse at 50% 35%,rgba(164,56,91,.23),transparent 42%),
+radial-gradient(ellipse at 10% 80%,rgba(108,45,89,.15),transparent 32%),
+#09070a}
+.orbit{position:absolute;width:min(70vw,720px);aspect-ratio:1;border:1px solid rgba(255,255,255,.06);border-radius:50%;animation:spin 35s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:var(--rose);box-shadow:0 0 25px 5px rgba(241,154,183,.5)}
+.orbit:before{top:7%;left:24%} .orbit:after{right:8%;bottom:27%;opacity:.6}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-inner{text-align:center;max-width:1000px;position:relative;z-index:2}
+.eyebrow{font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--rose2);margin-bottom:28px}
+h1{font-family:"Cormorant Garamond";font-size:clamp(72px,14vw,170px);font-weight:500;line-height:.78;letter-spacing:-.04em;margin:0}
+.script{font-family:"Great Vibes";font-size:clamp(36px,6vw,68px);color:var(--rose);display:block;margin-top:18px;transform:rotate(-3deg)}
+.hero-copy{max-width:610px;margin:34px auto 0;color:#cbbec5;font-family:"Cormorant Garamond";font-size:clamp(19px,2.7vw,28px);line-height:1.3}
+.hero-cta{display:inline-flex;align-items:center;gap:12px;margin-top:44px;padding:14px 20px;border:1px solid var(--line);border-radius:100px;color:#fff;text-decoration:none;font-size:11px;letter-spacing:.16em;text-transform:uppercase;backdrop-filter:blur(15px);transition:.35s}
+.hero-cta:hover{border-color:rgba(241,154,183,.6);transform:translateY(-2px);box-shadow:0 12px 35px rgba(241,154,183,.12)}
+.scroll-line{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:#82767d}
+section{position:relative;z-index:2}
+.intro{padding:130px 24px 80px;max-width:1180px;margin:auto}
+.kicker{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--rose)}
+.display{font-family:"Cormorant Garamond";font-size:clamp(45px,7vw,88px);line-height:.95;font-weight:500;max-width:850px;margin:18px 0}
+.display em{color:var(--rose);font-style:normal}
+.sub{color:var(--muted);max-width:580px;font-size:14px;line-height:1.8}
+.letter-wrap{max-width:1040px;margin:auto;padding:40px 20px 150px}
+.letter-card{background:var(--paper);color:var(--ink);border-radius:4px;box-shadow:0 45px 100px rgba(0,0,0,.4);position:relative;overflow:hidden}
+.letter-card:before{content:"";position:absolute;inset:0;opacity:.3;background:repeating-linear-gradient(0deg,transparent 0,transparent 31px,rgba(60,35,42,.055) 32px)}
+.letter-head{padding:55px clamp(25px,7vw,80px) 30px;display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid rgba(36,27,32,.12);position:relative}
+.letter-title{font-family:"Great Vibes";font-size:55px;color:#9e4f6b}
+.letter-date{font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.5}
+.letter-body{padding:25px clamp(25px,7vw,90px) 75px;position:relative}
+.letter-block{display:grid;grid-template-columns:45px 1fr;gap:15px;padding:38px 0;border-bottom:1px solid rgba(36,27,32,.09);font-family:"Cormorant Garamond";font-size:21px;line-height:1.62}
+.letter-block:last-child{border:0}
+.chapter{font-family:"DM Sans";font-size:9px;letter-spacing:.2em;color:#a66a7f;padding-top:8px}
+.letter-block strong{color:#9b4c68;font-weight:600}
+.gallery-section{padding:90px 20px 150px;background:linear-gradient(180deg,#09070a,#10090d 70%,#09070a)}
+.gallery-head{max-width:1180px;margin:auto;padding:0 0 45px}
+.gallery{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.shot{margin:0;position:relative;overflow:hidden;background:#130e12;cursor:pointer;border-radius:3px}
+.shot:nth-child(1),.shot:nth-child(4),.shot:nth-child(7){grid-column:span 7}
+.shot:nth-child(2),.shot:nth-child(3),.shot:nth-child(5),.shot:nth-child(6),.shot:nth-child(8){grid-column:span 5}
+.shot img{display:block;width:100%;height:clamp(320px,42vw,590px);object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .7s}
+.shot:hover img{transform:scale(1.045);filter:brightness(.72)}
+.shot figcaption{position:absolute;left:18px;right:18px;bottom:16px;display:flex;gap:12px;align-items:center;font-size:10px;letter-spacing:.1em;color:white;text-shadow:0 2px 15px #000;opacity:.9}
+.shot figcaption span{color:var(--rose2)}
+.quote-section{padding:150px 24px;text-align:center;min-height:80vh;display:grid;place-items:center;background:
+radial-gradient(ellipse at 50% 50%,rgba(150,49,84,.22),transparent 48%),#09070a}
+.quote{max-width:900px}
+.quote .tiny{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--rose)}
+.quote h2{font-family:"Cormorant Garamond";font-size:clamp(50px,8vw,100px);line-height:.9;font-weight:500;margin:25px 0}
+.quote h2 em{font-family:"Great Vibes";color:var(--rose);font-style:normal;font-size:1.1em}
+.quote p{color:var(--muted);max-width:600px;margin:auto;line-height:1.8}
+.final-heart{font-size:40px;margin-top:45px;animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.15);filter:drop-shadow(0 0 18px rgba(241,154,183,.5))}}
+footer{padding:40px 20px 70px;text-align:center;color:#6f646a;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.lightbox{position:fixed;inset:0;background:rgba(4,3,4,.96);z-index:300;display:none;align-items:center;justify-content:center;padding:30px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:86vh;object-fit:contain;box-shadow:0 30px 90px #000}
+.lb-close,.lb-prev,.lb-next{position:absolute;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:white;width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer}
+.lb-close{right:25px;top:25px} .lb-prev{left:25px} .lb-next{right:25px}
+.lb-count{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.25em;color:#aaa}
+@media(max-width:760px){
+ .topbar{padding:18px 18px} .topbar a{display:none}
+ .orbit{width:115vw}
+ .intro{padding:90px 20px 45px}
+ .letter-wrap{padding:20px 10px 90px}
+ .letter-head{padding:35px 24px 25px}
+ .letter-title{font-size:43px}
+ .letter-body{padding:10px 24px 40px}
+ .letter-block{grid-template-columns:28px 1fr;font-size:18px;line-height:1.55;padding:28px 0}
+ .gallery-section{padding:70px 12px 100px}
+ .gallery{display:block}
+ .shot{margin-bottom:12px}
+ .shot img{height:78svh;min-height:440px}
+ .quote-section{padding:100px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div><div class="cursor" id="cursor"></div>
+<div class="topbar"><div class="brand">A + ?</div><a href="#letter">Open the letter ↓</a></div>
+
+<header class="hero">
+  <div class="orbit"></div>
+  <div class="hero-inner reveal">
+    <div class="eyebrow">A little corner of the internet · made for you</div>
+    <h1>For my<br><span class="script">Babyyy</span></h1>
+    <p class="hero-copy">Not a sorry. Not an argument. Just a little piece of my heart, put into words — because some feelings deserve more than a chat bubble.</p>
+    <a class="hero-cta" href="#intro">Enter our little world <span>→</span></a>
+  </div>
+  <div class="scroll-line">scroll slowly · there is no rush</div>
+</header>
+
+<section class="intro reveal" id="intro">
+  <div class="kicker">01 · Before you read</div>
+  <h2 class="display">There are some things I want you to <em>feel</em>, not just read.</h2>
+  <p class="sub">So I made you something a little different. Take your time. Read it when you're calm. And remember that behind every word here is someone who still wants the same thing: <strong>us, happy.</strong></p>
+</section>
+
+<section class="letter-wrap" id="letter">
+  <div class="letter-card">
+    <div class="letter-head">
+      <div class="letter-title">My heart, honestly.</div>
+      <div class="letter-date">For you · with love</div>
+    </div>
+    <div class="letter-body"><div class="letter-block reveal"><span class="chapter">01</span><div>Babyyy, mai tumko kuch batana chahta hu, kuch express karna chahta hu ki tum mere liye kya ho aur mai tumhare liye kya feel karta hu. ❤️<br><br>Maine apni life me bahut kam apni feelings express ki hain. Bahut kam aisa hua hai jab mai andar se, dil se khush hua hu aur apni feelings ko freely feel aur express kar paya hu. Aur sach bolu toh maine ye sab sabse zyada sirf tumhare saamne feel kiya hai.<br><br>Mai tumse sach me bahut zyada pyaar karta hu. Tumhari bahut value karta hu, kyuki mai tumko dil se apna maanta hu. Sirf relationship ke naam se nahi, balki genuinely apna. Aur meri sabse badi wish yahi hai ki hum dono hamesha ek saath khush rahein, ek dusre ko samjhein, ek dusre ka saath dein aur future me pyaar se apni family banayein. Mai chahta hu ki tum mere ghar ki bahu bano, mere pure khandan me sab tumko bahut pyaar karein, tumko khush rakhein aur tum bhi sabko utna hi pyaar do. ❤️</div></div>
+<div class="letter-block reveal"><span class="chapter">02</span><div>Isi liye jo mai ab tumse bolne wala hu, please usko meri complaint ya tumhare against koi baat mat samajhna. Mai ye sab tumhe isliye bata raha hu kyuki mai hum dono ko bahut seriously leta hu aur hamara future mere liye bahut important hai.<br><br>Jo abhi kuch time se hum dono ke beech ho raha hai, mujhe lagta hai woh hum dono ke liye thik nahi hai.</div></div>
+<div class="letter-block reveal"><span class="chapter">03</span><div>Tum jo sochti ho, jisse tumko bura lagta hai, jo tum hurt feel karti ho, mai usko genuinely samajhta hu. Mai ye kabhi nahi bolunga ki tumhe hurt nahi hona chahiye ya tum jo feel karti ho woh galat hai. Mujhe pata hai meri kuch galtiyon se tumko genuinely hurt hua hai, aur mujhe uska bahut zyada regret hai. Mai uske liye tumse maafi bhi mang chuka hu aur mai maanta hu ki mujhse galti hui thi.<br><br>Lekin babyyy, meri ek feeling tumhe samajhni hai.</div></div>
+<div class="letter-block reveal"><span class="chapter">04</span><div>Jab hum kisi baat ko saamne baithkar discuss karte hain, ek dusre ki baat samajhte hain, mai apni galti accept karta hu, tumse genuinely maafi mangta hu aur hum us baat ko resolve karte hain, toh uske baad mai chahta hu ki hum dheere-dheere us baat ko peeche chhodkar aage badhein.<br><br>Kyuki jab wohi purani baat baar-baar yaad aati hai aur baar-baar mujhe ye sunne ko milta hai ki &quot;tumne mujhe hurt kiya tha&quot;, toh mai sach me andar se guilt me chala jata hu. Mujhe lagta hai ki mai wahi galti baar-baar kar raha hu, jabki mai uske liye already bahut baar sorry bol chuka hu aur dil se accept kar chuka hu ki mujhse galti hui thi.<br><br>Uska impact mujh par ye hota hai ki mai andar se ruk jata hu. Underconfident ho jata hu. Kabhi-kabhi mujhe ye bhi feel hota hai ki tumko pyaar se kaise bolu, tumhare saath normally kaise rahu, kyuki mere mind me wahi guilt aa jata hai.</div></div>
+<div class="letter-block reveal"><span class="chapter">05</span><div>Mai tumhare hurt ko chhota nahi kar raha babyyy. Tumko bura laga tha, mai samajhta hu. Lekin mai ye bhi chahta hu ki meri galti ko accept karne, uske liye genuinely sorry hone aur apna behaviour improve karne ke baad mujhe bhi aage badhne ka mauka mile.<br><br>Humara relationship sirf hamari past mistakes ka naam nahi hai. Humare beech itna pyaar hai, itni achhi memories hain, itne efforts hain aur hum dono ek dusre ke liye itna kuch karte hain. Mai chahta hu ki hum un sab cheezon ko bhi utni hi importance dein.</div></div>
+<div class="letter-block reveal"><span class="chapter">06</span><div>Aur mujhe pata hai ki kabhi-kabhi overthinking ki wajah se purani baatein automatically yaad aa jaati hain. Mai ye bhi samajhta hu ki overthinking ek din me band nahi hoti. Mai tumse ye expectation nahi kar raha ki tum kal se bilkul overthink karna band kar do.<br><br>Bas mai chahta hu ki hum dono milkar dheere-dheere is cheez ko better karein. Choti-choti cheezon se shuru karein. Apne routine me woh cheezein laayein jo tumko genuinely khushi deti hain, tumhara mind positive cheezon me lage, tum apne career, learning, hobbies, fitness ya kisi bhi aisi cheez me time do jo tumhe achha feel karaye.</div></div>
+<div class="letter-block reveal"><span class="chapter">07</span><div>Mai tumko ye sab isliye nahi bol raha ki tum mere liye convenient ban jao ya mujhe tumhare emotions handle na karne padein.<br><br>Mai ye isliye bol raha hu kyuki <strong>mai tumko khush dekhna chahta hu.</strong> Mai nahi chahta ki tumhara itna saara time unhi purani baaton ko sochne me nikal jaye jo tumko andar se hurt karti hain. Mai chahta hu tumhari apni bhi ek beautiful life ho, tumhare apne goals ho, apni hobbies ho, apni khushiyan ho.</div></div>
+<div class="letter-block reveal"><span class="chapter">08</span><div>Mai tumhare saath hu. Tumhari har problem me hu. Tumhe jab meri zarurat ho mai hu. Tumhe support chahiye mai dunga. Tumhe pyaar chahiye mai dunga. Tumhe kisi cheez me help chahiye mai karunga.<br><br>Lekin babyyy, kuch cheezein aisi hoti hain jo partner sirf support kar sakta hai, tumhari jagah khud nahi kar sakta.<br><br>Jaise mai apna behaviour improve kar raha hu, apni mistakes ko samajh raha hu aur tumko hurt na karne ki poori koshish karta hu, waise hi tumko bhi apni kuch cheezon par dheere-dheere kaam karna hoga. Ye tumhare against nahi hai. Ye hum dono ke liye hai.<br><br>Kyuki relationship ek insaan ka nahi hota. Hum dono involved hain. Isliye hum dono ki responsibility bhi hai.</div></div>
+<div class="letter-block reveal"><span class="chapter">09</span><div>Mai tumse ye nahi keh raha ki tum mujhe har waqt happy rakho. Mai bhi tumse ye expectation nahi rakhta ki tum hamesha perfect raho ya kabhi mood kharab na ho. Tum human ho, tumhare emotions hain aur mai unko samajhta hu.<br><br>Bas mai chahta hu ki jab tumhara mood kharab ho ya tum overthink karo, toh hum dono ek dusre ke against na ho jaayein. Hum ek team ki tarah us situation ko handle karein.</div></div>
+<div class="letter-block reveal"><span class="chapter">10</span><div>Aur please meri is baat ko kabhi aisa mat samajhna ki mai tumhare efforts ya tumhare pyaar ko value nahi karta. Mai tumhare har effort ki respect karta hu. Tum mere liye jo karti ho, jis tarah mujhe pyaar karti ho, mai us sabko dil se appreciate karta hu.<br><br>Mai bas chahta hu ki hum dono apni-apni taraf se effort karein.<br><br>Mai tumko change karna nahi chahta.<br><br><strong>Mai chahta hu ki hum dono saath me grow karein.</strong> ❤️</div></div>
+<div class="letter-block reveal"><span class="chapter">11</span><div>Aur babyyy, itne din se hum dono ke beech baat nahi ho rahi hai, please iska matlab ye bilkul mat samajhna ki mera mann nahi hai tumse baat karne ka ya mai tumse baat nahi karna chahta. Aisa bilkul nahi hai. Sach toh ye hai ki mai khud tumse baat karna chahta hu, tumhare saath normal hona chahta hu, tumse pyaar se baat karna chahta hu.<br><br>Bas kuch cheezein mujhe andar se upset kar deti hain aur phir mai usi guilt me chala jata hu. Mere mind me itna kuch chalne lagta hai ki chahte hue bhi mai normally baat nahi kar pata. Mujhe samajh nahi aata ki kya bolu, kaise bolu, aur phir mai aur zyada chup ho jata hu.<br><br>Isliye meri silence ko kabhi meri lack of love ya lack of care mat samajhna. Mai tumse door rehna nahi chahta. Mai bas kabhi-kabhi khud ko emotionally settle karne ke liye thoda ruk jata hu.<br><br>Mera mann tumse baat karne ka hai, tumhare saath rehne ka hai, tumko pyaar karne ka hai. Bas mai chahta hu ki jab hum baat karein toh hum dono apne guilt, hurt aur purani baaton me phir se na fasein, balki ek dusre ko samajhkar pyaar se aage badhein. ❤️</div></div>
+<div class="letter-block reveal"><span class="chapter">12</span><div>Mai tumse bahut pyaar karta hu babyyy. ❤️<br><br>Aur sach me, mai apni poori life tumhare saath pyaar se, shanti se aur khushi se jeena chahta hu. Isliye ye sab tumko bol raha hu.<br><br><strong>Mai tumhare against nahi hu. Mai tumhare saath hu. Hamesha. ❤️</strong></div></div></div>
+  </div>
+</section>
+
+<section class="gallery-section" id="memories">
+  <div class="gallery-head reveal">
+    <div class="kicker">02 · Our memories</div>
+    <h2 class="display">Before the hard days, there were <em>these.</em></h2>
+    <p class="sub">The little smiles, silly faces, quiet moments and ordinary days that became ours.</p>
+  </div>
+  <div class="gallery"><figure class="shot reveal" data-index="0" onclick="openGallery(0)">
+        <img src="assets/1.jpg" alt="Memory 1" loading="lazy">
+        <figcaption><span>01</span>A little piece of us.</figcaption>
+    </figure>
+<figure class="shot reveal" data-index="1" onclick="openGallery(1)">
+        <img src="assets/2.jpg" alt="Memory 2" loading="lazy">
+        <figcaption><span>02</span>Two people, one little world.</figcaption>
+    </figure>
+<figure class="shot reveal" data-index="2" onclick="openGallery(2)">
+        <img src="assets/3.jpg" alt="Memory 3" loading="lazy">
+        <figcaption><span>03</span>The smiles I want to keep.</figcaption>
+    </figure>
+<figure class="shot reveal" data-index="3" onclick="openGallery(3)">
+        <img src="assets/4.jpg" alt="Memory 4" loading="lazy">
+        <figcaption><span>04</span>One of those ordinary moments that became special.</figcaption>
+    </figure>
+<figure class="shot reveal" data-index="4" onclick="openGallery(4)">
+        <img src="assets/5.jpg" alt="Memory 5" loading="lazy">
+        <figcaption><span>05</span>Still choosing you.</figcaption>
+    </figure>
+<figure class="shot reveal" data-index="5" onclick="openGallery(5)">
+        <img src="assets/6.jpg" alt="Memory 6" loading="lazy">
+        <figcaption><span>06</span>The kind of memory that stays.</figcaption>
+    </figure>
+<figure class="shot reveal" data-index="6" onclick="openGallery(6)">
+        <img src="assets/7.jpg" alt="Memory 7" loading="lazy">
+        <figcaption><span>07</span>Us, exactly as we are.</figcaption>
+    </figure>
+<figure class="shot reveal" data-index="7" onclick="openGallery(7)">
+        <img src="assets/8.jpg" alt="Memory 8" loading="lazy">
+        <figcaption><span>08</span>And a future worth growing into.</figcaption>
+    </figure></div>
+</section>
+
+<section class="quote-section">
+  <div class="quote reveal">
+    <div class="tiny">03 · What I want us to remember</div>
+    <h2>Not perfect.<br><em>Just together.</em></h2>
+    <p>We don't have to win every conversation. We don't have to understand everything instantly. We just have to keep choosing honesty, patience, growth and each other.</p>
+    <div class="final-heart">♡</div>
+  </div>
+</section>
+
+<footer>Made for one person · from one heart · with a lot of love</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeGallery()">×</button>
+  <button class="lb-prev" onclick="moveGallery(-1)">‹</button>
+  <img id="lbimg" src="" alt="Memory">
+  <button class="lb-next" onclick="moveGallery(1)">›</button>
+  <div class="lb-count" id="lbcount"></div>
+</div>
+
+<script>
+const imgs = [...Array(8)].map((_,i)=>`assets/${i+1}.jpg`);
+let current=0;
+function openGallery(i) {
+ current=i; document.getElementById('lbimg').src=imgs[current];
+ document.getElementById('lbcount').textContent=`0${current+1} / 08`;
+ document.getElementById('lightbox').classList.add('open');
+ document.body.style.overflow='hidden';
+}
+function closeGallery() {
+ document.getElementById('lightbox').classList.remove('open');
+ document.body.style.overflow='';
+}
+function moveGallery(dir) {
+ current=(current+dir+imgs.length)%imgs.length;
+ document.getElementById('lbimg').src=imgs[current];
+ document.getElementById('lbcount').textContent=`0${current+1} / 08`;
+}
+document.addEventListener('keydown',e=>{
+ if(e.key==='Escape') closeGallery();
+ if(e.key==='ArrowRight') moveGallery(1);
+ if(e.key==='ArrowLeft') moveGallery(-1);
+});
+let startX=0;
+document.getElementById('lightbox').addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
+document.getElementById('lightbox').addEventListener('touchend',e=>{
+ const dx=e.changedTouches[0].clientX-startX;
+ if(Math.abs(dx)>50) moveGallery(dx<0?1:-1);
+});
+const progress=document.getElementById('progress');
+addEventListener('scroll',()=>{
+ const h=document.documentElement.scrollHeight-innerHeight;
+ progress.style.width=(scrollY/h*100)+'%';
+},{passive:true});
+const observer=new IntersectionObserver(es=>es.forEach(e=>{
+ if(e.isIntersecting) e.target.classList.add('visible');
+}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));
+const cursor=document.getElementById('cursor');
+addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});
+</script>
+</body>
+</html>
